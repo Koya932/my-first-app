@@ -3,14 +3,22 @@
 @tailwind utilities;
 
 :root {
-  font-family: "Noto Sans JP", "Yu Gothic UI", Meiryo, Inter, system-ui, sans-serif;
-  color: #0f172a;
-  background: #f6f8f4;
+  color-scheme: dark;
+  font-family:
+    Inter, "Noto Sans JP", "Yu Gothic UI", "Yu Gothic", Meiryo, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #050914;
+  letter-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+  background: #050914;
 }
 
 button,
@@ -18,4 +26,16 @@ input,
 select,
 textarea {
   font: inherit;
+}
+
+::selection {
+  background: rgba(244, 199, 107, .28);
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+input[type="number"] {
+  min-width: 0;
 }
